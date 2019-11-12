@@ -15,8 +15,6 @@ var utils = require('./utils')
 var spinner = ora('building for production...')
 spinner.start()
 
-console.log(path.join(config.build.assetsRoot))
-
 rm(path.join(config.build.assetsRoot, '*'), err => {
   if (err) throw err
   webpack(webpackConfig, function (err, stats) {

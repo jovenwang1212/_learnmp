@@ -14,7 +14,6 @@ var proxyMiddleware = require('http-proxy-middleware')
 var portfinder = require('portfinder')
 var webpackConfig = require('./webpack.dev.conf')
 var utils = require('./utils')
-var rm = require('rimraf')
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -46,34 +45,6 @@ if (process.env.PLATFORM === 'swan') {
 //     cb()
 //   })
 // })
-
-rm(path.join(config.build.assetsRoot, '*'), err => {
-  if (err) throw err
-  webpack(webpackConfig, function (err, stats) {
-    if (err) throw err
-    if (process.env.PLATFORM === 'swan') {
-      utils.writeFrameworkinfo()
-    }
-    process.stdout.write(stats.toString({
-      colors: true,
-      modules: false,
-      children: false,
-      chunks: false,
-      chunkModules: false
-    }) + '\n\n')
-
-    if (stats.hasErrors()) {
-      console.log(chalk.red('  Build failed with errors.\n'))
-      process.exit(1)
-    }
-
-    console.log(chalk.cyan('  Build complete.\n'))
-    console.log(chalk.yellow(
-      '  Tip: built files are meant to be served over an HTTP server.\n' +
-      '  Opening index.html over file:// won\'t work.\n'
-    ))
-  })
-})
 
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
@@ -118,7 +89,7 @@ var readyPromise = new Promise(resolve => {
 module.exports = new Promise((resolve, reject) => {
   portfinder.basePort = port
   portfinder.getPortPromise()
-  .then(newPort => {
+    .then(newPort => {
       if (port !== newPort) {
         console.log(`${port}端口被占用，开启新端口${newPort}`)
       }
@@ -134,7 +105,7 @@ module.exports = new Promise((resolve, reject) => {
           server.close()
         }
       })
-  }).catch(error => {
-    console.log('没有找到空闲端口，请打开任务管理器杀死进程端口再试', error)
-  })
+    }).catch(error => {
+      console.log('没有找到空闲端口，请打开任务管理器杀死进程端口再试', error)
+    })
 })
