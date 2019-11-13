@@ -1,4 +1,4 @@
-// pages/demo2/index.js
+// pages/request_demo/index.js
 Page({
 
   /**
@@ -6,6 +6,18 @@ Page({
    */
   data: {
 
+  },
+  doRequest(){
+    // new XMLHttpRequest()
+    wx.request({
+      url: 'https://api.douban.com/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a',
+      header:{
+        'content-type':'application/x-www-form-urlencoded'
+      },
+      success:(res)=>{
+        console.log(res.data.subjects)
+      }
+    })
   },
 
   /**
