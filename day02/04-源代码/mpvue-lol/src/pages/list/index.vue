@@ -12,6 +12,7 @@
 
 <script>
 import heroList from '../../data/lol_duowan'
+
 export default {
   data () {
     return {
