@@ -8,7 +8,7 @@ Page({
 
   },
 
-  toLogin() {
+  toLogin(){
     wx.navigateTo({
       url: '/pages/login/index',
     })

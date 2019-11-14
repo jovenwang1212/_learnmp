@@ -1,2 +1,2 @@
 <text>首页</text>
-<button bindtap="toLogin">登录</button>
+<button bindtap="toLogin">去登陆</button>

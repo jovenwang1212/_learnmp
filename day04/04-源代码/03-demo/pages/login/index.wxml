@@ -1,1 +1,2 @@
-<button bindtap="goBack">返回</button>
+<text>登陆页</text>
+<button bindtap="back">返回</button>

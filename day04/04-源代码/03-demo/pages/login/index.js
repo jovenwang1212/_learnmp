@@ -7,17 +7,14 @@ Page({
   data: {
 
   },
-
-  goBack(){
+  back(){
     // wx.navigateTo({
     //   url: '/pages/home/index',
     // })
-    // wx.switchTab({
-    //   url: '/pages/home/index'
-    // })
-    wx.navigateBack()
+    wx.switchTab({
+      url: '/pages/me/index'
+    })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

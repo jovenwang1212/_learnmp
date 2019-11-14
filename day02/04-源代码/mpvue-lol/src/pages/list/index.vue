@@ -11,13 +11,26 @@
 </template>
 
 <script>
-import heroList from '../../data/lol_duowan'
+// import heroList from '../../data/lol_duowan'
 
 export default {
   data () {
     return {
-      heroList
+      heroList: []
     }
+  },
+  created () {
+    const app = getApp()
+    app.$hero_movie = app.$db.collection('heros')
+
+    debugger
+    app.$hero_movie.where({
+
+    }).get({
+      success (res) {
+        console.log(res)
+      }
+    })
   },
   methods: {
     toDetail (id) {
