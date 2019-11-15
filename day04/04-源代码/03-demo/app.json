@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/loading_demo/index",
+    "pages/input_demo/index",
     "pages/home/index",
     "pages/login/index",
     "pages/category/index",
