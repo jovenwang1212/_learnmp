@@ -21,7 +21,7 @@
       <div class="name-favo">
         <p class="name">紫米ZMI 小米QC3.0快充车充 5V2.4A双USB智能输出 一拖二手机平板通用汽车充电器 AP821 银色</p>
         <div class=favo>
-          <span class="iconfont icon-share"></span>
+          <span class="iconfont"></span>
           <span>分享</span>
         </div>
       </div>
@@ -52,7 +52,7 @@
     </div>
     <div class="fixed-bottom">
       <div class="icon-text">
-        <span class="iconfont icon-kefu"></span>
+        <span class="iconfont"></span>
         <span>联系客服</span>
       </div>
       <div class="icon-text">
@@ -117,11 +117,6 @@
       flex-direction: column;
       align-items: center;
       position: relative;
-
-      button {
-        position: absolute;
-        opacity: 0;
-      }
     }
   }
 
@@ -204,11 +199,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
-    button {
-      position: absolute;
-      opacity: 0;
-    }
   }
 
   .btn {
