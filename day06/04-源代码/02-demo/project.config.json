@@ -13,9 +13,9 @@
 		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.3",
+	"libVersion": "2.9.2",
 	"appid": "wxd24d05cdfb5198f9",
-	"projectname": "01-demo",
+	"projectname": "02-demo",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

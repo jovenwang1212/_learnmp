@@ -1,4 +1,3 @@
-// pages/wxsdk_demo/index.js
 Page({
 
   /**
@@ -7,43 +6,40 @@ Page({
   data: {
 
   },
-  inputHandler(event){
-    console.log(event.detail.value)
-  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('日志-加载')
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log('日志-渲染完成')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log('日志-显示')
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log('日志-隐藏')
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log('日志-销毁')
   },
 
   /**

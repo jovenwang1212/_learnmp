@@ -1,2 +1,0 @@
-<button>默认按钮样式</button>
-<input value="Hello" bindinput="inputHandler"></input>
